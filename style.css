@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p {
+    color: black;
+    font-size: 1.6rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem; 
+}
+.section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    text-align: center;
+}
+.cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: rgb(85, 5, 18);
+    background-color: transparent;
+    border: 2px solid darkred;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1 rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+.cta:hover {
+    color: white;
+    background-color : darkred;
+}
+
+/* header section */
+#header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+}
+#header .header {
+    min-height: 8vh;
+    background-color: rgb(85, 5, 18);
+}
+#header .nav-bar {
+    background-color: rgb(85, 5, 18);
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 500;
+}
+#header .nav-bar .nav-list ul {
+    display:flex;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+#header .nav-bar .nav-list ul li {
+    text-transform: uppercase;
+    margin: 0 10px;
+    font-size: 15px;
+}
+#header .nav-bar .nav-list ul li a {
+    color: palevioletred;
+    transition: .5s;
+}
+#header .nav-bar .nav-list ul li a:hover {
+    background-color: rgb(85, 5, 18);
+    color: white;
+}
+/* end header section */
+
+
+/* main section */
+#main{
+    background-image: url(./img/background.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#main .cta {
+    color: white;
+}
+#main::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(163, 30, 50);
+    opacity: .5;
+    z-index: -1;
+}
+#main .main{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+#main h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+}
+#main h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: darkred;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+}
+/* end main section*/
+
+/* about section */
+#about .about {
+    background-image: url(img/marble.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+#about .col-left {
+    width: 250px;
+    height: 360px;
+}
+#about .col-right {
+    width: 100%;
+}
+#about .col-right h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+#about .col-right p {
+    margin-bottom: 20px;
+}
+#about .col-right .cta {
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+#about .col-left .about-image {
+    width: 50px;
+    height: 80px;
+}
+/* end about section */
+
+/* Strengths section */
+#strengths{
+    background-image: url(./img/background.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#strengths::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(163, 30, 50);
+    opacity: .5;
+    z-index: -1;
+}
+#strengths .strengths {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px;
+}
+#strengths .strengths-top .section-title {
+    color:white;
+}
+#strengths .strengths-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+#strengths .strengths-item {
+    flex-basis: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(img/b.ombree.png);
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+#strengths .strengths-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(163, 30, 50);
+    opacity: .8;
+    z-index: -1;
+}
+#strengths .strengths-item h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+#strengths .strengths-item p {
+    color: white;
+    text-align: left;
+}
+/* end strengths section */
+
+/* passion section */
+#passion .passion {
+    background-image: url(img/marble.jpg);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#passion .passion-header h1 {
+    margin-bottom: 50px;
+}
+#passion .all-passions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#passion .passion-item {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    width: 8 0%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#passion .passion-info {
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(85, 5, 18);
+    color: white;
+}
+#passion .passion-info h1 {
+    font-size: 3rem;
+    line-height: 7rem;
+    font-weight: 500;
+}
+#passion .passion-info p {
+    color: white;
+}
+#passion .passion-image {
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+#passion .passion-image:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+/* end passion section */
+
+/* project section */
+#project {
+    background-image: url(./img/background.jpg);
+    background-color: rgb(85, 5, 18);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#project:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(163, 30, 50);
+    opacity: .5;
+    z-index: -1;
+}
+#project .section-title {
+    color:white;
+}
+#project .project {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px;
+}
+#project .project-item {
+    margin: 5px;
+    border: 3px solid rgb(238, 200, 200);
+    float: left;
+    width: 400px;
+    align-items: center;
+    justify-items: center;
+    overflow: auto;
+}
+#project .desc {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.8rem;
+    color: white;
+}
+/* end project section*/
+
+/* contact section */
+#contact .contact {
+    background-image: url(img/marble.jpg);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px;
+}
+#contact .contact-items {
+    width: 400PX;
+}
+#contact .contact-item {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0 rgb(85, 5, 18);
+}
+#contact .contact-info h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+#contact .contact-info h2 {
+    font-size: 1.5 rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+/* end contact section */
+
+/* footer */
+#footer {
+    background-color: rgb(85, 5, 18);
+}
+#footer .footer {
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+#footer .brand h1 {
+    font-size: 2rem;
+    color: white;
+}
+#footer h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white
+}
+#footer p{
+    font-size: 1rem;
+    color: white;
+}
+/* end footer */
+
+/* keyframes */
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal {
+    100%{
+        color: white;
+    }
+}
+/* end of keyframes */
+
+/* media query for tablet */
+@media only screen and (min-width:768px) {
+    .cta{
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+    h1.section-title{
+        font-size: 6rem;
+    }
+
+    /* main */
+    #main h1 {
+        font-size: 7rem;
+    }
+    /* end main */
+
+    /* strengths */
+    #strengths .strengths-bottom .strengths-item {
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+    /* end strengths */
+
+    /*passion*/
+    #passion .passion-item {
+        flex-direction: row;
+    }
+    #passion .passion-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    #passion .passion-item {
+        width: 80%;
+        height: 400px;
+        margin: 0;
+        border-radius: 15px;
+    }
+    #passion .all-passions .passion-info {
+        height: 100%;
+    }
+    #passion .all-passions .passion-image {
+        height: 100%;
+    }
+    /*end passion*/
+
+    /*project*/
+    #project .project-item {
+        width: 50%;
+        height: auto;
+        margin: 0;
+    }
+    /*end project*/
+
+    /* contact */
+    #contact .contact {
+        flex-direction: column;
+        padding: 100px 0;
+        align-items: center;
+        justify-content: center;
+        min-width: 20vh;
+    }
+    #contact .contact-items{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 20pv;
+        margin: 0;
+    }
+    /* end contact */
+}
+/* end media query for tablet */
